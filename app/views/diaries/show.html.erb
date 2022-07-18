@@ -3,8 +3,7 @@
 <%= render @diary %>
 
 <div>
-  <%= link_to "Edit this diary", edit_diary_path(@diary) %> |
-  <%= link_to "Back to diaries", diaries_path %>
-
-  <%= button_to "Destroy this diary", @diary, method: :delete %>
+  <%= link_to "編集", edit_diary_path(@diary) %> |
+  <%= link_to "削除", diary_path(@diary), method: :delete, date: {confirm: "本当に削除しますか？"} %>|
+  <%= link_to "一覧へ戻る", diaries_path %>
 </div>
